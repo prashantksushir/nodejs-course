@@ -12,7 +12,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 // configuring express to use hbs to render html pages
 app.set('view engine', 'hbs');
 
-// express middleware
+// ****************  express middleware
 // this will intercept the existing functinality and add something inbetween it
 // the below middleware will intercept the request response and logs the request method
 // and request url into server.log file
@@ -28,7 +28,7 @@ app.use((request, response, next) => {
 app.use((request, response, next)=>{
 	return response.render('maintainance.hbs');
 });
-
+// *********************************************
 // making files in public directory as static so I can access files in them as
 // localhost:3000/help.html
 app.use(express.static(__dirname + '/public'));;
